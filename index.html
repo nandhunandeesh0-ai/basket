@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Buy Bazaar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- QUICK OPTIONS -->
+<div class="quick-options">
+  <div class="card blue">
+    <strong>Buy Bazaar</strong>
+  </div>
+
+  <div class="card">
+    <span class=></span>
+    <p class="green"></p>
+    <strong>Grocery</strong>
+  </div>
+
+  <div class="card">
+    <p class="green"></p>
+    <strong>Fuel</strong>
+  </div>
+
+  <div class="card">
+    <p class="green"></p>
+    <strong>Courier</strong>
+  </div>
+
+  <div class="card">
+    <p class="green"></p>
+    <strong> Travels </strong>
+  </div>
+
+  <div class="card">
+    <p class="green"></p>
+    <strong> Cyber Work</strong>
+  </div>
+  
+</div>
+
+<!-- LOCATION BAR -->
+<div class="location-bar">
+  <i class="fa-solid fa-house"></i>
+  <span>HOME · Vinayak Layout, 5th Cross</span>
+  <i class="fa-solid fa-chevron-down"></i>
+  <div class="coin">
+    <i class="fa-solid fa-bolt"></i> 0
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" placeholder="watches">
+  <i class="fa-solid fa-camera"></i>
+</div>
+
+
+    <div class="categories-scroll">
+
+      <div class="cat">
+        <i class="fa-solid fa-shirt"></i>
+        <p>Fashion</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-mobile"></i>
+        <p>Mobiles</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-heart"></i>
+        <p>Beauty</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-laptop"></i>
+        <p>Electronics</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-house"></i>
+        <p>Home</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-tv"></i>
+        <p>Appliances</p>
+      </div>
+
+      <div class="cat">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>Grocery</p>
+      </div>
+
+    </div>
+
+</div>
+<!-- BANNER SLIDER -->
+<div class="slider-container">
+  <div class="slider" id="slider">
+
+    <div class="slide active">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/1dea02c920c94a83.png?q=80" />
+    </div>
+
+    <div class="slide">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/9e48bbeaa5a01f0d.jpg?q=80" />
+    </div>
+
+    <div class="slide">
+      <img src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/1fe2e3a6af22df69.png?q=80" />
+    </div>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+  const slider = document.getElementById("slider");
+
+  function showSlide(i) {
+    index = i;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(d => d.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 3000);
+</script>
+<div class="suggested-section">
+  <h2 class="section-title">Suggested For You</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/slipper-flip-flop/e/y/q/8-5-pro-107-propock-brown-original-imagh9q2u4zghzbb.jpeg">
+      <p class="title">Prodock Men Flip Flops</p>
+      <p class="price">
+        <span class="old">₹1,999</span>
+        <span class="new">₹372</span>
+      </p>
+      <p class="buy">Buy at ₹301</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/slipper-flip-flop/l/x/u/9-pro-311-propock-brown-original-imagh9q2tsguzxht.jpeg">
+      <p class="title">Kelsey Men Slippers</p>
+      <p class="price">
+        <span class="old">₹2,999</span>
+        <span class="new">₹792</span>
+      </p>
+      <p class="buy">Buy at ₹676</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/slipper-flip-flop/f/z/q/7-calibre-black-original-imagj5w9tf3gfwhk.jpeg">
+      <p class="title">CALIBREL Men Slippers</p>
+      <p class="price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹451</span>
+      </p>
+      <p class="buy">Buy at ₹352</p>
+    </div>
+
+    
+    
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/sandal/7/n/u/8-azor-1-black-azzaro-original-imagzzq4jefhhw4c.jpeg">
+      <p class="title">Azzaro Black Men Slippers</p>
+      <p class="price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹570</span>
+      </p>
+      <p class="buy">Buy at ₹476</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/sandal/7/n/u/8-azor-1-black-azzaro-original-imagzzq4jefhhw4c.jpeg">
+      <p class="title">Azzaro Black Men Slippers</p>
+      <p class="price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹570</span>
+      </p>
+      <p class="buy">Buy at ₹476</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/sandal/7/n/u/8-azor-1-black-azzaro-original-imagzzq4jefhhw4c.jpeg">
+      <p class="title">Azzaro Black Men Slippers</p>
+      <p class="price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹570</span>
+      </p>
+      <p class="buy">Buy at ₹476</p>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
