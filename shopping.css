@@ -1,0 +1,58 @@
+.payment-method {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.money-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  fill: #444;
+}
+
+.method-details {
+  flex: 1;
+}
+
+.change-method {
+  font-size: 12px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.method-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 10px;
+}
+
+.payment-options {
+  display: none;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.payment-options .option {
+  padding: 12px;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-options .option:last-child {
+  border-bottom: none;
+}
+
+.payment-options .option:hover {
+  background: #f2f2f2;
+}

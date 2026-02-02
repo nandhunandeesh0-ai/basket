@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Product Detail</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* APP CONTAINER */
+.app {
+  max-width: 420px;
+  margin: auto;
+}
+
+/* IMAGE SECTION */
+.image-section {
+  padding: 12px;
+  background: #f9f9f9;
+}
+
+.main-image {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.main-image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* THUMBNAILS */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* CONTENT */
+.content-section {
+  padding: 15px;
+}
+
+.brand {
+  font-size: 14px;
+  color: #555;
+}
+
+.content-section h2 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+.rating span {
+  color: #555;
+}
+
+.price-box {
+  margin-top: 14px;
+}
+
+.mrp {
+  color: #888;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.offer {
+  color: green;
+  font-size: 14px;
+}
+
+/* BOTTOM ACTION BAR */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-cart {
+  flex: 2;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.save {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* SPACE FOR FIXED BAR */
+.spacer {
+  height: 90px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- IMAGE AREA -->
+  <div class="image-section">
+    <div class="main-image">
+      <img src="https://i.imgur.com/qY1bZkL.png">
+    </div>
+
+    <div class="thumbnails">
+      <img src="https://i.imgur.com/qY1bZkL.png">
+      <img src="https://i.imgur.com/qY1bZkL.png">
+      <img src="https://i.imgur.com/qY1bZkL.png">
+      <img src="https://i.imgur.com/qY1bZkL.png">
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-section">
+    <div class="brand">Little's</div>
+
+    <h2>Little's Soft Cleansing Extra Thick & Moist Baby Wipes, 80 pcs</h2>
+
+    <div class="rating">
+      ⭐ 4.3 <span>588 Ratings & 21 Reviews</span>
+    </div>
+
+    <div class="price-box">
+      <div class="mrp">MRP ₹82.99</div>
+      <div class="price">₹82.99</div>
+      <div class="offer">You Save 56% OFF</div>
+      <small>(inclusive of all taxes)</small>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+</div>
+
+<!-- FIXED BOTTOM BUTTONS -->
+<div class="bottom-bar">
+  <button class="add-cart" onclick="addToCart()">Add to cart</button>
+  <button class="save"> Save</button>
+</div>
+<script>
+function addToCart() {
+  const product = {
+    id: "wipes1",
+    name: "Little's Soft Cleansing Baby Wipes",
+    price: 82.99,
+    image: "https://i.imgur.com/qY1bZkL.png",
+    qty: 1
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+  if (cart[product.id]) {
+    cart[product.id].qty += 1;
+  } else {
+    cart[product.id] = product;
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "cart.html";
+}
+</script>
+
+</body>
+</html>
